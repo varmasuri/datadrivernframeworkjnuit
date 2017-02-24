@@ -2,6 +2,7 @@ package tests;
 
 import java.io.IOException;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,11 +18,17 @@ public class LoginTest extends TestBase{
 	@Test
 	public void loginTest() {
 		driver.get(CONFIG.getProperty("testSiteName"));
-		TestUtil.doLogin("varma435@gmail.com", "Test@435");
+		TestUtil.doLogin("radhi.kr@gmail.com", "Radhi@8153");
 		
 		if(!isLoggedIn) {
 			// reporterror
 		}
+	}
+	
+	@After
+	public void afterTest() {
+		tearDown();
+		
 	}
 
 }
