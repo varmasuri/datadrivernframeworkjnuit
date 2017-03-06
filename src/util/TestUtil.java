@@ -17,7 +17,7 @@ public class TestUtil extends TestBase {
 		getObject("password").sendKeys(password);
 		getObject("login_button").click();
 		
-		//check wther any login error message is being displayed
+		//check whether any login error message is being displayed
 		
 		try {
 		String displayedUsername = driver.findElement(By.xpath(OR.getProperty("username_top_link"))).getText();
